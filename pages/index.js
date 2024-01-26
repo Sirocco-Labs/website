@@ -17,9 +17,10 @@ export default function Home() {
 				</h2>
 				<Image
 					src="/Sirocco.png"
-					width={350}
-					height={350}
+					width={500}
+					height={500}
 					alt="Sirocco labs logo"
+          className={styles.img}
 				/>
 
 				<div className={styles.grid}>
@@ -39,7 +40,7 @@ export default function Home() {
 				</div>
 
 				<div className={styles.blurb}>
-					<p >
+					<p>
 						Founded by a dynamic duo of siblings with a shared
 						passion for technology, Zackaria and Anniessa Antar
 						bring a unique blend of creativity and technical

@@ -6,9 +6,13 @@
   justify-content: center;
   align-items: center;
 }
+.img {
+   height: 500px;
+   width: 500px;
+ }
 .h2{
   text-align: center;
-  font-size: 1.15rem;
+  font-size: 1.5rem;
 }
 .title a {
   color: #0070f3;
@@ -79,6 +83,7 @@
     border-color 0.15s ease;
 }
 
+
 .button:hover,
 .button:focus,
 .button:active {
@@ -134,7 +139,24 @@
 }
 
 @media (max-width: 600px) {
+  .img {
+      height: 350px;
+      width: 350px;
+    }
+  .h2{
+    font-size: 1.15rem;
+  }
   .grid {
     flex-direction: column;
+  }
+}
+@media (min-width: 600px) {
+
+.blurb p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    text-align: justify;
+    hyphens: auto;
+    word-wrap: break-word
   }
 }
