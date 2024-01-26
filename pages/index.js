@@ -39,7 +39,26 @@ export default function Home() {
 				</div>
 
 				<div className={styles.blurb}>
-					<p className={styles.description}>
+					<p >
+						Founded by a dynamic duo of siblings with a shared
+						passion for technology, Zackaria and Anniessa Antar
+						bring a unique blend of creativity and technical
+						expertise to the world of software and web
+						development. Our journey began with a shared vision to
+						center relationships in building digital experiences,
+						and today, we invite you to explore the extraordinary
+						solutions crafted by our close-knit team.
+					</p>
+					<p>
+						At Sirocco Labs, we believe in the power of
+						collaboration, sibling synergy, and cutting-edge
+						technology to bring your ideas to life. Whether you're
+						envisioning an interactive website, a robust software
+						application, or anything in between, join us on this
+						exciting venture where family values meet digital
+						excellence.
+					</p>
+					{/* <p className={styles.description}>
 						Founded by a dynamic duo of siblings with a shared
 						passion for technology, Zackaria and Anniessa Antar
 						bring a unique blend of creativity and technical
@@ -57,7 +76,7 @@ export default function Home() {
 						application, or anything in between, join us on this
 						exciting venture where family values meet digital
 						excellence.
-					</p>
+					</p> */}
 				</div>
 			</main>
 
