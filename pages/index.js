@@ -17,8 +17,8 @@ export default function Home() {
 				</h2>
 				<Image
 					src="/Sirocco.png"
-					width={500}
-					height={500}
+					width={350}
+					height={350}
 					alt="Sirocco labs logo"
 				/>
 
