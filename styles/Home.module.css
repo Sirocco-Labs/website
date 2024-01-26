@@ -48,15 +48,49 @@
   margin-top: 3rem;
 }
 
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .25rem;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  width: 150px;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  color: #a600f3;
+  border-color: #a600f3;
+}
+
+.button h3 {
+  /* margin: 1rem 0 1rem 0; */
+  font-size: 1.5rem;
+}
+
+.button p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
 .card {
   margin: 1rem;
   flex-basis: 45%;
-  padding: 1.5rem;
+  padding: 1.25rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
+  width: 350px;
   transition:
     color 0.15s ease,
     border-color 0.15s ease;
