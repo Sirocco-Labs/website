@@ -1,12 +1,14 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
+  /* padding: 0 0.5rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
+.h2{
+  text-align: center;
+}
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -19,7 +21,7 @@
 }
 
 .title {
-  margin: 0 0 1rem;
+  /* margin: 0 0 1rem; */
   line-height: 1.15;
   font-size: 3.6rem;
 }
@@ -44,8 +46,18 @@
   justify-content: center;
   flex-wrap: wrap;
 
-  max-width: 800px;
-  margin-top: 3rem;
+  max-width: 85vw;
+  margin-bottom: .25rem;
+}
+
+.blurb{
+  width: 80%;
+}
+
+.blurb p{
+  text-align:justify;
+  hyphens: auto;
+  word-wrap:break-word
 }
 
 .button {
@@ -120,7 +132,6 @@
 
 @media (max-width: 600px) {
   .grid {
-    width: 100%;
     flex-direction: column;
   }
 }
