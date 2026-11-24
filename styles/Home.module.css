@@ -67,6 +67,7 @@
   word-wrap:break-word
 }
 
+<<<<<<< Updated upstream
 .button {
   display: flex;
   align-items: center;
@@ -83,6 +84,38 @@
     border-color 0.15s ease;
 }
 
+=======
+.dark .sectionTitle {
+  color: var(--lavender);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.person h3 {
+  font-size: 1.6rem;
+  margin: 1.5rem 0 0.25rem;
+}
+
+.person p {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #d6d0db;
+  margin: 0 0 1rem;
+}
+
+.person .role {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--lavender);
+  margin-bottom: 1rem;
+}
+>>>>>>> Stashed changes
 
 .button:hover,
 .button:focus,
@@ -138,6 +171,7 @@
   height: 1em;
 }
 
+<<<<<<< Updated upstream
 @media (max-width: 600px) {
   .img {
       height: 350px;
@@ -145,6 +179,71 @@
     }
   .h2{
     font-size: 1.15rem;
+=======
+/* Screen recordings are cropped to the phone body; round the corners to match its frame */
+.phoneVideo {
+  display: block;
+  border-radius: 17% / 8.3%;
+}
+
+.phones > *:nth-child(2) {
+  transform: translateY(-1.5rem);
+}
+
+/* ---------- Contact ---------- */
+.contact {
+  overflow: hidden;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact .orb {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact > *:not(.orb) {
+  position: relative;
+  z-index: 1;
+}
+
+.contactTitle {
+  font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.75rem clamp(1.25rem, 5vw, 4rem);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .workGrid,
+  .teamGrid,
+  .services {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero,
+  .aboutGrid,
+  .teamGrid,
+  .workGrid {
+    grid-template-columns: 1fr;
+>>>>>>> Stashed changes
   }
   .grid {
     flex-direction: column;
