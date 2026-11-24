@@ -1,141 +1,97 @@
-import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
+import Layout from "../components/Layout";
 import styles from "../styles/Home.module.css";
+
+const services = [
+	{
+		title: "Mobile apps",
+		text: "Cross-platform apps for iOS and Android, built with React Native and Expo.",
+	},
+	{
+		title: "Web apps & PWAs",
+		text: "Websites and progressive web apps, from artist portfolios to in-gallery installations.",
+	},
+	{
+		title: "Admin portals",
+		text: "Tools that let your staff manage content, moderate submissions and track engagement data.",
+	},
+	{
+		title: "Multilingual design",
+		text: "Translation-ready apps that respond to diverse, multilingual audiences.",
+	},
+];
 
 export default function Home() {
 	return (
-		<div className={styles.container}>
-			<Head>
-				<title>Sirocco Labs</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-
+		<Layout
+			title="Sirocco Labs — Minneapolis web studio"
+			description="Sirocco Labs is a Minneapolis-based web studio run by siblings Anniessa and Zackaria Antar, building apps and websites for mission-driven nonprofits, organizations and entrepreneurs."
+		>
 			<main>
-				<h1 className={styles.title}>Welcome to Sirocco Labs</h1>
-				<h2 className={styles.h2}>
-					Where innovation meets family ties
-				</h2>
-				<Image
-					src="/Sirocco.png"
-					width={500}
-					height={500}
-					alt="Sirocco labs logo"
-          className={styles.img}
-				/>
+				<section className={styles.hero}>
+					<div className={styles.heroText}>
+						<p className={styles.eyebrow}>Minneapolis web studio</p>
+						<h1 className={styles.heroTitle}>
+							Digital experiences as creative as they are intuitive.
+						</h1>
+						<p className={styles.heroLede}>
+							We help mission-driven nonprofits, organizations and
+							entrepreneurs connect with their audiences and share
+							resources.
+						</p>
+						<div className={styles.heroActions}>
+							<Link href="/work" className={styles.buttonPrimary}>
+								See our work
+							</Link>
+							<Link href="/contact" className={styles.buttonGhost}>
+								Start a project
+							</Link>
+						</div>
+					</div>
+					<Image
+						src="/Sirocco.png"
+						width={420}
+						height={420}
+						alt="Sirocco Labs logo"
+						className={styles.heroLogo}
+						priority
+					/>
+				</section>
 
-				<div className={styles.grid}>
-					<a
-						href="mailto:siroccolabs@gmail.com? &subject=I'd love to work with y'all!"
-						className={styles.button}
-					>
-						<h3>Contact Us</h3>
-					</a>
-					{/* <a href="/about" className={styles.card}>
-            <h3>About &rarr;</h3>
-          </a>
+				<section className={styles.section}>
+					<h2 className={styles.sectionTitle}>Company overview</h2>
+					<div className={styles.aboutGrid}>
+						<p className={styles.aboutLead}>
+							Sirocco Labs is a Minneapolis-based web studio run by
+							siblings Anniessa and Zackaria Antar.
+						</p>
+						<div className={styles.aboutBody}>
+							<p>
+								Our goal is to support mission-driven nonprofits,
+								organizations and entrepreneurs to connect with their
+								audiences, share resources and create digital
+								experiences that are as creative as they are
+								intuitive.
+							</p>
+							<p>
+								We believe in the power of community, and we build
+								tools that help foster lasting connection to each
+								other and to our world.
+							</p>
+						</div>
+					</div>
 
-          <a href="/contact" className={styles.card}>
-            <h3>Contact &rarr;</h3>
-          </a> */}
-				</div>
-
-				<div className={styles.blurb}>
-					<p>
-						Founded by a dynamic duo of siblings with a shared
-						passion for technology, Zackaria and Anniessa Antar
-						bring a unique blend of creativity and technical
-						expertise to the world of software and web
-						development. Our journey began with a shared vision to
-						center relationships in building digital experiences,
-						and today, we invite you to explore the extraordinary
-						solutions crafted by our close-knit team.
-					</p>
-					<p>
-						At Sirocco Labs, we believe in the power of
-						collaboration, sibling synergy, and cutting-edge
-						technology to bring your ideas to life. Whether you're
-						envisioning an interactive website, a robust software
-						application, or anything in between, join us on this
-						exciting venture where family values meet digital
-						excellence.
-					</p>
-					{/* <p className={styles.description}>
-						Founded by a dynamic duo of siblings with a shared
-						passion for technology, Zackaria and Anniessa Antar
-						bring a unique blend of creativity and technical
-						expertise to the world of software and web
-						development. Our journey began with a shared vision to
-						center relationships in building digital experiences,
-						and today, we invite you to explore the extraordinary
-						solutions crafted by our close-knit team.
-					</p>
-					<p className={styles.description}>
-						At Sirocco Labs, we believe in the power of
-						collaboration, sibling synergy, and cutting-edge
-						technology to bring your ideas to life. Whether you're
-						envisioning an interactive website, a robust software
-						application, or anything in between, join us on this
-						exciting venture where family values meet digital
-						excellence.
-					</p> */}
-				</div>
+					<ul className={styles.services}>
+						{services.map((s) => (
+							<li key={s.title} className={styles.serviceCard}>
+								<h3>{s.title}</h3>
+								<p>{s.text}</p>
+							</li>
+						))}
+					</ul>
+				</section>
 			</main>
-
-			<footer>© 2024</footer>
-
-			<style jsx>{`
-				main {
-          overflow:hidden;
-          width:98%;
-					padding: 0 0.25rem;
-					flex: 1;
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					align-items: center;
-				}
-				footer {
-					width: 100%;
-					height: 100px;
-					border-top: 1px solid #eaeaea;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-				}
-				footer img {
-					margin-left: 0.5rem;
-				}
-				footer a {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					text-decoration: none;
-					color: inherit;
-				}
-				code {
-					background: #fafafa;
-					border-radius: 5px;
-					padding: 0.75rem;
-					font-size: 1.1rem;
-					font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-						DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
-						monospace;
-				}
-			`}</style>
-
-			<style jsx global>{`
-				html,
-				body {
-					padding: 0;
-					margin: 0;
-					font-family: -apple-system, BlinkMacSystemFont, Segoe UI,
-						Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-						Helvetica Neue, sans-serif;
-				}
-				* {
-					box-sizing: border-box;
-				}
-			`}</style>
-		</div>
+		</Layout>
 	);
 }
