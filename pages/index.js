@@ -12,7 +12,7 @@ const services = [
 	},
 	{
 		title: "Accessibility",
-		text: "We design and build to WCAG 2.1 AA: keyboard and screen reader support, readable contrast and large touch targets.",
+		text: "We design and build to WCAG 2.2 AA: keyboard and screen reader support, readable contrast and large touch targets.",
 	},
 	{
 		title: "Mobile & web apps",

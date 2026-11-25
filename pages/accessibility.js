@@ -14,7 +14,7 @@ export default function Accessibility() {
 					<p>
 						We want everyone to be able to use this website, and we hold
 						it to the same standard we build to for clients: the Web
-						Content Accessibility Guidelines (WCAG) 2.1, level AA.
+						Content Accessibility Guidelines (WCAG) 2.2, level AA.
 					</p>
 
 					<h2>What we’ve done</h2>

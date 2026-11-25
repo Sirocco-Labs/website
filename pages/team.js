@@ -8,7 +8,7 @@ const team = [
 		role: "Co-founder",
 		photo: "/team/anniessa.jpg",
 		bio: [
-			"Anniessa Antar is a creative technologist and frontend engineer who leads UX design and accessibility at Sirocco Labs. She builds websites and apps that bring people together and designs and tests them to meet WCAG 2.1 AA. She works with arts organizations, nonprofits, cultural institutions, and independent artists to make digital spaces that are accessible, fast, and welcoming, designed around the communities they serve.",
+			"Anniessa Antar is a creative technologist and frontend engineer who leads UX design and accessibility at Sirocco Labs. She builds websites and apps that bring people together and designs and tests them to meet WCAG 2.2 AA. She works with arts organizations, nonprofits, cultural institutions, and independent artists to make digital spaces that are accessible, fast, and welcoming, designed around the communities they serve.",
 			"Her process is collaborative and hands-on: she prototypes quickly, refines carefully, and brings deep experience co-designing with diverse stakeholders. Alongside her client work, Anniessa teaches in the MFA program at the Minneapolis College of Art and Design, writes music, and directs films.",
 		],
 	},
