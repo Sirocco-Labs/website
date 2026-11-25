@@ -287,6 +287,16 @@
   gap: 1rem;
 }
 
+.heroShot {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 30px 80px rgba(75, 29, 143, 0.18);
+}
+
 .heroLogo {
   justify-self: center;
   width: 100%;
@@ -389,7 +399,8 @@
 
 .portrait {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1;
+  max-width: 440px;
   border-radius: 24px;
   overflow: hidden;
   background: #222;
@@ -444,7 +455,8 @@
   transform: scale(1.04);
 }
 
-.workCard h2 {
+.workCard h2,
+.workCard h3 {
   font-size: 1.6rem;
   font-weight: 900;
   letter-spacing: -0.02em;
@@ -463,7 +475,8 @@
 }
 
 .workCard:hover .workMore,
-.workCard:hover h2 {
+.workCard:hover h2,
+.workCard:hover h3 {
   color: var(--violet);
 }
 
@@ -492,7 +505,7 @@
   margin: 0 0 1.25rem;
 }
 
-/* Case studies with headed sections (Safe at Home) */
+/* Case studies with headed sections */
 .caseSection + .caseSection {
   margin-top: 3rem;
 }
@@ -670,6 +683,12 @@
   z-index: 1;
 }
 
+.contactNote {
+  position: relative;
+  margin: 2rem 0 0;
+  color: #333;
+}
+
 .contact .heroLede {
   color: #333;
 }
@@ -681,6 +700,55 @@
   margin: 0 0 1rem;
 }
 
+/* Section title with a link on the right */
+.sectionHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+}
+
+.textLink {
+  display: inline-block;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  color: var(--plum);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.textLink:hover {
+  color: var(--violet);
+}
+
+/* Plain text pages (accessibility, 404) */
+.prose {
+  max-width: 44rem;
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+  margin: 2.5rem 0 0.75rem;
+}
+
+.prose p,
+.prose li {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.prose ul {
+  padding-left: 1.25rem;
+}
+
+.prose p a,
+.prose li a {
+  color: var(--plum);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 /* ---------- Footer ---------- */
 .footer {
   display: flex;
@@ -689,6 +757,16 @@
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.footer a:hover {
+  color: var(--violet);
 }
 
 /* ---------- Responsive ---------- */
@@ -713,9 +791,9 @@
     padding-top: 2.5rem;
   }
 
-  .heroLogo {
-    max-width: 260px;
-    order: -1;
+  /* The first work card shows this same image just below */
+  .heroShot {
+    display: none;
   }
 
   .aboutGrid {

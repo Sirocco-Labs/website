@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { Roboto } from "next/font/google";
+import { SITE_URL } from "../lib/site";
 import styles from "../styles/Home.module.css";
 
 const roboto = Roboto({
@@ -21,6 +22,7 @@ export default function Layout({ title, description, children }) {
 	const { pathname, asPath } = useRouter();
 	const [menuOpen, setMenuOpen] = useState(false);
 	const menuButton = useRef(null);
+	const canonical = `${SITE_URL}${asPath === "/" ? "" : asPath.split(/[?#]/)[0]}`;
 
 	// Close the mobile menu after navigating
 	useEffect(() => {
@@ -46,7 +48,20 @@ export default function Layout({ title, description, children }) {
 				<title>{title}</title>
 				{description && <meta name="description" content={description} />}
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/favicon.ico" sizes="32x32" />
+				<link rel="icon" href="/icon.png" type="image/png" />
+				<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+				<link rel="canonical" href={canonical} />
+				<meta property="og:site_name" content="Sirocco Labs" />
+				<meta property="og:type" content="website" />
+				<meta property="og:title" content={title} />
+				{description && <meta property="og:description" content={description} />}
+				<meta property="og:url" content={canonical} />
+				<meta property="og:image" content={`${SITE_URL}/Sirocco.png`} />
+				<meta property="og:image:width" content="500" />
+				<meta property="og:image:height" content="500" />
+				<meta property="og:image:alt" content="Sirocco Labs logo" />
+				<meta name="twitter:card" content="summary" />
 			</Head>
 
 			<a href="#main" className={styles.skipLink}>
@@ -99,8 +114,8 @@ export default function Layout({ title, description, children }) {
 			</div>
 
 			<footer className={styles.footer}>
-				<span>© {new Date().getFullYear()} Sirocco Labs</span>
-				<span>Minneapolis, MN</span>
+				<span>© {new Date().getFullYear()} Sirocco, LLC · Minneapolis, MN</span>
+				<Link href="/accessibility">Accessibility</Link>
 			</footer>
 		</div>
 	);

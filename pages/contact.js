@@ -1,7 +1,6 @@
 import Layout from "../components/Layout";
+import { CONTACT_EMAIL } from "../lib/site";
 import styles from "../styles/Home.module.css";
-
-const CONTACT_EMAIL = "hello@siroccolabs.com";
 
 export default function Contact() {
 	return (
@@ -20,12 +19,13 @@ export default function Contact() {
 					</p>
 					<a
 						href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-							"I'd love to work with y'all!"
+							"Project inquiry"
 						)}`}
 						className={styles.buttonPrimary}
 					>
 						{CONTACT_EMAIL}
 					</a>
+					<p className={styles.contactNote}>Sirocco, LLC · Minneapolis, Minnesota</p>
 				</section>
 			</main>
 		</Layout>

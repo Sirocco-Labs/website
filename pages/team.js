@@ -8,7 +8,7 @@ const team = [
 		role: "Co-founder",
 		photo: "/team/anniessa.jpg",
 		bio: [
-			"Anniessa Antar is a creative technologist and frontend engineer who builds websites and apps that bring people together. She works with arts organizations, nonprofits, cultural institutions, and independent artists to make digital spaces that are accessible, fast, and welcoming, designed around the communities they serve.",
+			"Anniessa Antar is a creative technologist and frontend engineer who leads UX design and accessibility at Sirocco Labs. She builds websites and apps that bring people together and designs and tests them to meet WCAG 2.1 AA. She works with arts organizations, nonprofits, cultural institutions, and independent artists to make digital spaces that are accessible, fast, and welcoming, designed around the communities they serve.",
 			"Her process is collaborative and hands-on: she prototypes quickly, refines carefully, and brings deep experience co-designing with diverse stakeholders. Alongside her client work, Anniessa teaches in the MFA program at the Minneapolis College of Art and Design, writes music, and directs films.",
 		],
 	},
@@ -16,7 +16,12 @@ const team = [
 		name: "Zackaria Antar",
 		role: "Co-founder",
 		photo: "/team/zackaria.jpg",
-		bio: ["Zackaria Antar is a software engineer and youth worker. Zackaria is currently an IT Specialist at US Bank Stadium, making music, and playing Magic the Gathering."],
+		// Wide photo: keep him in frame, he stands right of center
+		focus: "90% center",
+		bio: [
+			"Zackaria Antar is a backend engineer who builds the databases, APIs and admin tools behind Sirocco Labs’ apps. He follows security best practices, such as least-privilege access, encrypted data and careful handling of personal information, and writes automated tests so changes ship without surprises.",
+			"He documents his code and keeps systems simple, so client staff can run them after launch. Zackaria is also an IT specialist at U.S. Bank Stadium and a youth worker, and he makes music and plays Magic: The Gathering.",
+		],
 	},
 	{
 		name: "Olivia Webster",
@@ -55,7 +60,8 @@ export default function Team() {
 										src={person.photo}
 										alt={`Portrait of ${person.name}`}
 										fill
-										sizes="(max-width: 800px) 90vw, 40vw"
+										sizes="(max-width: 800px) 90vw, 440px"
+										style={person.focus ? { objectPosition: person.focus } : undefined}
 									/>
 								</div>
 								<h2>{person.name}</h2>

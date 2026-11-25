@@ -1,44 +1,49 @@
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/Layout";
+import WorkCard from "../components/WorkCard";
+import { work } from "../data/work";
 import styles from "../styles/Home.module.css";
 
 const services = [
 	{
-		title: "Mobile apps",
-		text: "Cross-platform apps for iOS and Android, built with React Native and Expo.",
+		title: "Website redesigns",
+		text: "Discovery, plain-language content and a clearer structure, built in WordPress or a custom stack your staff can update.",
 	},
 	{
-		title: "Web apps & PWAs",
-		text: "Websites and progressive web apps, from artist portfolios to in-gallery installations.",
+		title: "Accessibility",
+		text: "We design and build to WCAG 2.1 AA: keyboard and screen reader support, readable contrast and large touch targets.",
+	},
+	{
+		title: "Mobile & web apps",
+		text: "iOS and Android apps built with React Native and Expo, plus progressive web apps.",
 	},
 	{
 		title: "Admin portals",
-		text: "Tools that let your staff manage content, moderate submissions and track engagement data.",
-	},
-	{
-		title: "Multilingual design",
-		text: "Translation-ready apps that respond to diverse, multilingual audiences.",
+		text: "Tools that let your staff manage content, moderate submissions and pull engagement data for grant reports.",
 	},
 ];
+
+const hero = work[0].images[0];
+const selected = work.slice(0, 3);
 
 export default function Home() {
 	return (
 		<Layout
 			title="Sirocco Labs — Minneapolis web studio"
-			description="Sirocco Labs is a Minneapolis-based web studio run by siblings Anniessa and Zackaria Antar, building apps and websites for mission-driven nonprofits, organizations and entrepreneurs."
+			description="Sirocco Labs is a Minneapolis web studio that designs and builds accessible websites and apps for nonprofits, public agencies and mission-driven organizations."
 		>
 			<main>
 				<section className={styles.hero}>
 					<div className={styles.heroText}>
 						<p className={styles.eyebrow}>Minneapolis web studio</p>
 						<h1 className={styles.heroTitle}>
-							Digital experiences as creative as they are intuitive.
+							Accessible websites and apps for the people you serve.
 						</h1>
 						<p className={styles.heroLede}>
-							We help mission-driven nonprofits, organizations and
-							entrepreneurs connect with their audiences and share
-							resources.
+							We design websites and build apps for nonprofits, public
+							agencies and mission-driven organizations, so the people
+							who need you can find what they need.
 						</p>
 						<div className={styles.heroActions}>
 							<Link href="/work" className={styles.buttonPrimary}>
@@ -50,34 +55,50 @@ export default function Home() {
 						</div>
 					</div>
 					<Image
-						src="/Sirocco.png"
-						width={420}
-						height={420}
-						alt="Sirocco Labs logo"
-						className={styles.heroLogo}
+						src={hero.src}
+						width={hero.width}
+						height={hero.height}
+						alt="Homepage design from our shelter website redesign, with a pinned safety bar and Quick Exit button"
+						className={styles.heroShot}
+						sizes="(max-width: 800px) 90vw, 45vw"
 						priority
 					/>
 				</section>
 
 				<section className={styles.section}>
-					<h2 className={styles.sectionTitle}>Company overview</h2>
+					<div className={styles.sectionHead}>
+						<h2 className={styles.sectionTitle}>Selected work</h2>
+						<Link href="/work" className={styles.textLink}>
+							See all work →
+						</Link>
+					</div>
+					<ul className={styles.workGrid}>
+						{selected.map((project) => (
+							<li key={project.slug}>
+								<WorkCard project={project} headingLevel="h3" />
+							</li>
+						))}
+					</ul>
+				</section>
+
+				<section className={styles.section}>
+					<h2 className={styles.sectionTitle}>What we do</h2>
 					<div className={styles.aboutGrid}>
 						<p className={styles.aboutLead}>
-							Sirocco Labs is a Minneapolis-based web studio run by
-							siblings Anniessa and Zackaria Antar.
+							Sirocco Labs is a small team of designers and engineers in
+							Minneapolis, founded by siblings Anniessa and Zackaria
+							Antar.
 						</p>
 						<div className={styles.aboutBody}>
 							<p>
-								Our goal is to support mission-driven nonprofits,
-								organizations and entrepreneurs to connect with their
-								audiences, share resources and create digital
-								experiences that are as creative as they are
-								intuitive.
+								Every project starts with discovery and a listening
+								session with the people closest to the work: your staff,
+								your partners and the community you serve. What we hear
+								there shapes the design from the start.
 							</p>
 							<p>
-								We believe in the power of community, and we build
-								tools that help foster lasting connection to each
-								other and to our world.
+								We write in plain language and build translation-ready,
+								so your site or app works for multilingual audiences.
 							</p>
 						</div>
 					</div>

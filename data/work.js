@@ -1,5 +1,71 @@
 export const work = [
 	{
+		slug: "shelter-website-redesign",
+		title: "Shelter Website Redesign",
+		summary: "A safety-first, accessible WordPress redesign for a domestic violence shelter.",
+		client: "Client work (confidential) · In progress",
+		tags: ["UX strategy", "Web design", "WordPress"],
+		sections: [
+			{
+				heading: "The client",
+				paragraphs: [
+					"We're currently redesigning the website of a nonprofit that runs emergency shelter, a 24/7 crisis line, and legal and housing advocacy for people experiencing domestic abuse. Our agreement with the client keeps their identity private. Out of respect for them and the people they serve, we've replaced the organization's name, logo, contact details and photography in these screens with stand-ins.",
+				],
+				figure: {
+					layout: "single",
+					images: [
+						{ src: "/work/shelter-home.png", alt: "Homepage design with a pinned safety bar and Quick Exit button, “If you need help” and “If you want to help” panels, and four service cards", width: 1706, height: 1506 },
+					],
+				},
+			},
+			{
+				heading: "The challenge",
+				paragraphs: [
+					"A shelter website has two very different audiences. One is someone in crisis, maybe reading on a shared phone, in a hurry, and afraid of being seen. The other is a donor, volunteer or community partner who wants to help. The client's current site puts both groups through the same crowded menu. Its safety tools are small links, and key information is spread across many pages.",
+				],
+			},
+			{
+				heading: "Our process",
+				paragraphs: [
+					"The engagement started with discovery and a community listening session, so the people closest to the work could shape the design from the start. One question guided every decision after that: what does someone in crisis need from this page in the next ten seconds?",
+				],
+			},
+			{
+				heading: "Design direction",
+				list: [
+					{ lead: "Safety comes first.", text: "A pinned safety bar keeps a high-contrast Quick Exit button, an Esc-key shortcut, the crisis line and a language picker on screen everywhere. On mobile, Call, Text and Exit sit in a bar at the bottom of the screen, where a thumb can reach them." },
+					{ lead: "Two clear paths.", text: "The homepage opens by splitting into “If you need help” and “If you want to help,” so neither visitor has to hunt." },
+					{ lead: "Choices, not menus.", text: "The new Find Help page asks “What do you need right now?” and gives four plain options, from “I'm not safe right now” to “I'm worried about someone.” Each one leads to a single next step." },
+					{ lead: "Saying what happens next.", text: "A three-step “what happens when you reach out” section explains the first call before anyone makes it, so it feels less daunting." },
+					{ lead: "Discreet by design.", text: "Guidance on browsing safely, chats that clear when closed, and reminders about shared devices are built into the experience rather than buried on a policy page." },
+					{ lead: "A simpler structure.", text: "Navigation drops from seven items to five, organized around what visitors are trying to do." },
+				],
+			},
+			{
+				heading: "Visual language",
+				paragraphs: [
+					"We wanted the site to feel warm, calm and steady. It pairs deep plum and night tones with a soft linen background and sage panels. A single lamplight yellow is used only for safety actions, so the exit button is always the easiest thing to spot. Headlines are set in Fraunces, a warm serif. Body text is Atkinson Hyperlegible, a typeface the Braille Institute designed for readers with low vision.",
+				],
+			},
+			{
+				heading: "Built for everyone",
+				paragraphs: [
+					"The design meets WCAG AA contrast, every touch target is at least 44px, and the WordPress build uses semantic markup. It's built to work well with screen readers and keyboards. The plain-language copy is written to translate well into the community languages the organization serves.",
+				],
+			},
+			{
+				heading: "Status",
+				paragraphs: [
+					"This project is in progress, with launch planned for spring 2027. The screens shown are design direction and may change before launch.",
+				],
+			},
+		],
+		note: "Shown with identifying details removed to protect client confidentiality.",
+		images: [
+			{ src: "/work/shelter-home.png", alt: "Shelter website homepage design", width: 1706, height: 1506 },
+		],
+	},
+	{
 		slug: "ampers-mobile-app",
 		title: "AMPERS Mobile App",
 		summary: "A mobile app connecting Minnesotans to 17 community radio stations and AMPERS’ original programming.",
@@ -64,82 +130,16 @@ export const work = [
 		images: [{ src: "/work/ampers-home.png", alt: "AMPERS app home screen with a featured North Star Stories piece, a carousel of member stations, a language picker, and tabs for Home, Stations, Programs and Favorites", width: 706, height: 1384 }],
 	},
 	{
-		slug: "safe-at-home",
-		title: "Safe at Home",
-		summary: "A website redesign for a domestic violence shelter.",
-		client: "Client work (confidential) · In progress",
-		tags: ["UX strategy", "Web design", "WordPress"],
-		sections: [
-			{
-				heading: "The client",
-				paragraphs: [
-					"We're currently redesigning the website of a nonprofit that runs emergency shelter, a 24/7 crisis line, and legal and housing advocacy for people experiencing domestic abuse. Our agreement with the client keeps their identity private. Out of respect for them and the people they serve, we've replaced the organization's name, logo, contact details and photography in these screens with stand-ins.",
-				],
-				figure: {
-					layout: "single",
-					images: [
-						{ src: "/work/safe-home.png", alt: "Homepage design with a pinned safety bar and Quick Exit button, “If you need help” and “If you want to help” panels, and four service cards", width: 1706, height: 1506 },
-					],
-				},
-			},
-			{
-				heading: "The challenge",
-				paragraphs: [
-					"A shelter website has two very different audiences. One is someone in crisis, maybe reading on a shared phone, in a hurry, and afraid of being seen. The other is a donor, volunteer or community partner who wants to help. The client's current site puts both groups through the same crowded menu. Its safety tools are small links, and key information is spread across many pages.",
-				],
-			},
-			{
-				heading: "Our process",
-				paragraphs: [
-					"The engagement started with discovery and a community listening session, so the people closest to the work could shape the design from the start. One question guided every decision after that: what does someone in crisis need from this page in the next ten seconds?",
-				],
-			},
-			{
-				heading: "Design direction",
-				list: [
-					{ lead: "Safety comes first.", text: "A pinned safety bar keeps a high-contrast Quick Exit button, an Esc-key shortcut, the crisis line and a language picker on screen everywhere. On mobile, Call, Text and Exit sit in a bar at the bottom of the screen, where a thumb can reach them." },
-					{ lead: "Two clear paths.", text: "The homepage opens by splitting into “If you need help” and “If you want to help,” so neither visitor has to hunt." },
-					{ lead: "Choices, not menus.", text: "The new Find Help page asks “What do you need right now?” and gives four plain options, from “I'm not safe right now” to “I'm worried about someone.” Each one leads to a single next step." },
-					{ lead: "Saying what happens next.", text: "A three-step “what happens when you reach out” section explains the first call before anyone makes it, so it feels less daunting." },
-					{ lead: "Discreet by design.", text: "Guidance on browsing safely, chats that clear when closed, and reminders about shared devices are built into the experience rather than buried on a policy page." },
-					{ lead: "A simpler structure.", text: "Navigation drops from seven items to five, organized around what visitors are trying to do." },
-				],
-			},
-			{
-				heading: "Visual language",
-				paragraphs: [
-					"We wanted the site to feel warm, calm and steady. It pairs deep plum and night tones with a soft linen background and sage panels. A single lamplight yellow is used only for safety actions, so the exit button is always the easiest thing to spot. Headlines are set in Fraunces, a warm serif. Body text is Atkinson Hyperlegible, a typeface the Braille Institute designed for readers with low vision.",
-				],
-			},
-			{
-				heading: "Built for everyone",
-				paragraphs: [
-					"The design meets WCAG AA contrast, every touch target is at least 44px, and the WordPress build uses semantic markup. It's built to work well with screen readers and keyboards. The plain-language copy is written to translate well into the community languages the organization serves.",
-				],
-			},
-			{
-				heading: "Status",
-				paragraphs: [
-					"This project is in progress, with launch planned for spring 2027. The screens shown are design direction and may change before launch.",
-				],
-			},
-		],
-		note: "Shown with identifying details removed to protect client confidentiality.",
-		images: [
-			{ src: "/work/safe-home.png", alt: "Safe at Home homepage design", width: 1706, height: 1506 },
-		],
-	},
-	{
 		slug: "bikemn-ride-tracker",
 		title: "BikeMN Ride Tracker",
 		summary: "A gamified mobile app for tracking miles ridden, with an admin portal for challenges and grant reporting.",
-		client: "Bike MN",
+		client: "BikeMN",
 		tags: ["iOS & Android app", "Gamified challenges", "Admin portal"],
 		sections: [
 			{
 				heading: "Overview",
 				paragraphs: [
-					"Bike MN commissioned Sirocco Labs to develop a dynamic mobile application where users could track in real time how many miles they rode on their bikes.",
+					"BikeMN asked us to build a mobile app that lets riders track the miles they ride in real time.",
 				],
 				figure: {
 					layout: "phones",
@@ -153,14 +153,20 @@ export const work = [
 			{
 				heading: "Our approach",
 				paragraphs: [
-					"The app was gamified with BikeMN curated challenges wherein riders who completed challenges were entered into prize pools. BikeMN used this app as an interface to collect data for engagement and grant reporting purposes.",
-					"In addition to the mobile app, Sirocco Labs built an admin web portal for BikeMN to create new challenges, as well as monitor and manage user data from the app.",
+					"We made riding a game. BikeMN sets challenges, and riders who complete one are entered into a prize drawing. The app also gives BikeMN the engagement data it needs for grant reports.",
+					"Alongside the app, we built an admin web portal where BikeMN staff create new challenges and manage rider data.",
 				],
 			},
 			{
 				heading: "Deliverables",
 				paragraphs: [
 					"An iOS and Android app and an admin web portal for managing challenges and user data.",
+				],
+			},
+			{
+				heading: "Results",
+				paragraphs: [
+					"More than 1,000 riders used the app to log their miles and take on BikeMN’s challenges.",
 				],
 			},
 		],
@@ -178,7 +184,7 @@ export const work = [
 			{
 				heading: "Overview",
 				paragraphs: [
-					"Quilt of Beauty was commissioned by the Minnesota Marine Art Museum as an exhibition activation in support of Kao Kalia Yang’s book The Most Beautiful Thing. Visitors were invited to draw a quilt square, take a picture, and it would automatically be added to the collective digital quilt displayed in the gallery.",
+					"The Minnesota Marine Art Museum asked us to build an interactive piece for an exhibition about Kao Kalia Yang’s book The Most Beautiful Thing. Visitors drew a quilt square and photographed it, and their square was added automatically to a shared digital quilt projected in the gallery.",
 				],
 				figure: {
 					layout: "photos",
@@ -191,13 +197,19 @@ export const work = [
 			{
 				heading: "Our approach",
 				paragraphs: [
-					"This app was built as a progressive web application (PWA) that would only be accessible within the museum to ensure security and quality control. We also built an administrative portal for museum staff to delete inappropriate photos.",
+					"We built it as a progressive web app (PWA) that works only inside the museum, which kept it secure and kept submissions on topic. An admin portal lets museum staff remove inappropriate photos.",
 				],
 			},
 			{
 				heading: "Deliverables",
 				paragraphs: [
 					"An in-gallery progressive web app and an admin portal for museum staff.",
+				],
+			},
+			{
+				heading: "Results",
+				paragraphs: [
+					"More than 2,000 museum visitors used the app to add a square to the quilt.",
 				],
 			},
 		],
