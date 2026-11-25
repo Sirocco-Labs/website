@@ -32,7 +32,7 @@ export default function Work() {
 											)}
 										</div>
 										<p className={styles.eyebrow}>{project.client}</p>
-										<h3>{project.title}</h3>
+										<h2>{project.title}</h2>
 										<p>{project.summary}</p>
 										<span className={styles.workMore}>View project →</span>
 									</Link>

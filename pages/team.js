@@ -49,7 +49,7 @@ export default function Team() {
 										sizes="(max-width: 800px) 90vw, 40vw"
 									/>
 								</div>
-								<h3>{person.name}</h3>
+								<h2>{person.name}</h2>
 								<p className={styles.role}>{person.role}</p>
 								{person.bio.map((p, i) => (
 									<p key={i}>{p}</p>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../../components/Layout";
+import PhoneVideo from "../../components/PhoneVideo";
 import { work } from "../../data/work";
 import styles from "../../styles/Home.module.css";
 
@@ -66,19 +67,14 @@ export default function WorkPage({ project, next }) {
               <div className={styles[section.figure.layout]}>
                 {section.figure.images.map((img) =>
                   img.video ? (
-                    <video
-                      key={img.video}
-                      className={styles.phoneVideo}
-                      src={img.video}
-                      poster={img.src}
-                      width={img.width}
-                      height={img.height}
-                      aria-label={img.alt}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                    />
+                    <PhoneVideo
+												key={img.video}
+												src={img.video}
+												poster={img.src}
+												width={img.width}
+												height={img.height}
+												label={img.alt}
+											/>
                   ) : (
                     <Image
                       key={img.src}

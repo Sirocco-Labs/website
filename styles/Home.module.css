@@ -17,8 +17,35 @@
   flex-direction: column;
 }
 
-.page > main {
+/* Wraps each page's <main>; also the skip link's target */
+.mainTarget {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainTarget > main {
+  flex: 1;
+}
+
+.mainTarget:focus {
+  outline: none;
+}
+
+.skipLink {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 20;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 700;
+}
+
+.skipLink:focus {
+  top: 1rem;
 }
 
 /* Short pages (team, contact) stretch so the footer sits at the bottom */
@@ -82,6 +109,75 @@
 .navCta:hover {
   background: var(--violet);
   color: var(--paper) !important;
+}
+
+/* Mobile menu button, shown only on small screens */
+.menuButton {
+  display: none;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.menuButton:hover {
+  background: var(--lavender);
+}
+
+/* Three-line icon that turns into an X when open */
+.menuIcon,
+.menuIcon::before,
+.menuIcon::after {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.menuIcon {
+  position: relative;
+}
+
+.menuIcon::before,
+.menuIcon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.menuIcon::before {
+  top: -6px;
+}
+
+.menuIcon::after {
+  top: 6px;
+}
+
+.menuIcon[data-open="true"] {
+  background: transparent;
+}
+
+.menuIcon[data-open="true"]::before {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menuIcon[data-open="true"]::after {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Visible keyboard focus everywhere */
+.page a:focus-visible,
+.page button:focus-visible {
+  outline: 3px solid var(--violet);
+  outline-offset: 3px;
 }
 
 /* ---------- Shared ---------- */
@@ -269,7 +365,7 @@
   gap: clamp(2rem, 5vw, 4rem);
 }
 
-.person h3 {
+.person h2 {
   font-size: 1.6rem;
   margin: 1.5rem 0 0.25rem;
 }
@@ -347,7 +443,7 @@
   transform: scale(1.04);
 }
 
-.workCard h3 {
+.workCard h2 {
   font-size: 1.6rem;
   font-weight: 900;
   letter-spacing: -0.02em;
@@ -366,7 +462,7 @@
 }
 
 .workCard:hover .workMore,
-.workCard:hover h3 {
+.workCard:hover h2 {
   color: var(--violet);
 }
 
@@ -515,9 +611,37 @@
 }
 
 /* Screen recordings are cropped to the phone body; round the corners to match its frame */
+.phones > .videoWrap {
+  filter: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
 .phoneVideo {
   display: block;
+  width: 100%;
+  height: auto;
   border-radius: 17% / 8.3%;
+  filter: drop-shadow(0 18px 24px rgba(40, 10, 70, 0.25));
+}
+
+.videoToggle {
+  min-height: 44px;
+  padding: 0.5rem 1.1rem;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.videoToggle:hover {
+  background: var(--ink);
+  color: var(--paper);
 }
 
 .phones > *:nth-child(2) {
@@ -543,6 +667,10 @@
 .contact > *:not(.orb) {
   position: relative;
   z-index: 1;
+}
+
+.contact .heroLede {
+  color: #333;
 }
 
 .contactTitle {
@@ -595,8 +723,50 @@
 }
 
 @media (max-width: 560px) {
-  .navLinks a:not(.navCta) {
+  .brand {
+    font-size: 1.25rem;
+  }
+
+  .brand img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .menuButton {
+    display: inline-flex;
+  }
+
+  /* The nav becomes a panel that drops down under the header */
+  .navLinks {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem clamp(1.25rem, 5vw, 4rem) 1.5rem;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 16px 30px rgba(13, 13, 13, 0.08);
+  }
+
+  .navLinks[data-open="true"] {
+    display: flex;
+  }
+
+  .navLinks a {
+    padding: 0.9rem 0;
+    font-size: 1.25rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .navLinks .navCta {
+    margin-top: 1rem;
+    padding: 0.9rem 1rem;
+    text-align: center;
+    border-bottom: none;
   }
 
   .services {
@@ -606,5 +776,18 @@
   .footer {
     flex-direction: column;
     gap: 0.4rem;
+  }
+}
+
+/* Respect the visitor's "reduce motion" setting */
+@media (prefers-reduced-motion: reduce) {
+  .page *,
+  .page *::before,
+  .page *::after {
+    transition: none !important;
+  }
+
+  .workCard:hover .workCover img {
+    transform: none;
   }
 }
