@@ -27,13 +27,22 @@ const team = [
 			"She has a passion for green-fielding front ends and building websites and applications with intuitive architecture, clean code, and comprehensive tests. A former theater kid, she loves the great outdoors, a good research rabbit hole, and indulging in the many culinary delights the Twin Cities has to offer.",
 		],
 	},
+	{
+		name: "Joel Schuman",
+		role: "Contributing engineer",
+		photo: "/team/joel.jpg",
+		bio: [
+			"Joel Schuman is a full-stack engineer with 10+ years of experience shipping reliable software in large, legacy, and greenfield codebases. He has maintained and extended live production systems, from a crypto exchange to the engine behind Magic: The Gathering Online.",
+			"He has also tutored coding skills extensively, built interactive experiences with arts organizations, and led web development workshops. In his free time, he's usually playing piano or mandolin.",
+		],
+	},
 ];
 
 export default function Team() {
 	return (
 		<Layout
 			title="Team — Sirocco Labs"
-			description="Sirocco Labs is run by co-founders Anniessa and Zackaria Antar, with contributing engineer Olivia."
+			description="Sirocco Labs is run by co-founders Anniessa and Zackaria Antar, with contributing engineers Olivia Webster and Joel Schuman."
 		>
 			<main className={styles.fill}>
 				<section className={`${styles.section} ${styles.dark}`}>
