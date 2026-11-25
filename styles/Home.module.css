@@ -720,6 +720,11 @@
   .aboutGrid {
     gap: 1.5rem;
   }
+
+  /* Single column: give each project card more room */
+  .workGrid {
+    row-gap: 4.5rem;
+  }
 }
 
 @media (max-width: 560px) {
