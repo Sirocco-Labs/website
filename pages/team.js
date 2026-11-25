@@ -19,8 +19,8 @@ const team = [
 		// Wide photo: keep him in frame, he stands right of center
 		focus: "90% center",
 		bio: [
-			"Zackaria Antar is a backend engineer who builds the databases, APIs and admin tools behind Sirocco Labs’ apps. He follows security best practices, such as least-privilege access, encrypted data and careful handling of personal information, and writes automated tests so changes ship without surprises.",
-			"He documents his code and keeps systems simple, so client staff can run them after launch. Zackaria is also an IT specialist at U.S. Bank Stadium and a youth worker, and he makes music and plays Magic: The Gathering.",
+			"Zackaria Antar is a Minneapolis-based full-stack engineer with a back-end focus who builds secure, reliable systems that serve communities. He builds the behind-the-scenes engines that power websites and apps: the databases, servers, and cloud infrastructure that keep everything running smoothly. With a background in cybersecurity, he makes sure the digital tools people rely on are accessible, protect their information, and grow with their needs.",
+			"He is currently a Network Administrator at US Bank Stadium and enjoys playing music, playing tabletop games, and roller skating.",
 		],
 	},
 	{
